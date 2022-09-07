@@ -128,33 +128,6 @@ public class Using_Array_2D {
 				System.out.println(Arrays.toString(arr7[i]));
 			}
 			 
-			 
-			 
-			 
-			 
-	
-			
-			
-			
-			
-			
-		
-		
-		
-		
-		
-		
-		
-			
-		
-		
-		
-		
-		
-		
-		
-		
-				
 
 	}
 

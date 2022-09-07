@@ -12,7 +12,7 @@ public class Using_Nonerctangle_Array {
 		arr1[0][0]=1;
 		arr1[0][1]=2;
 		
-		arr1[1]=new int [3];	//1번째 행의 열정 열의 점수 3개를 지정
+		arr1[1]=new int [3];	//1번째 행의 열의 개수 3개로 지정
 		
 		arr1[1][0]=3;
 		arr1[1][1]=4;		

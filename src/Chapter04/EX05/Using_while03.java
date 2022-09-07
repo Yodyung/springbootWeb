@@ -43,6 +43,40 @@ public class Using_while03 {
 		
 		sc.close();
 
+		
+		/*
+		Scanner sc=new Scanner(System.in);
+		System.out.println("계산할 정수 값을 하나씩 띄어쓰기하며 넣으시오.");
+		System.out.println("멈추고 싶으면 '그만'을 넣으시오.");
+		
+		do {
+			String s;
+			s=sc.nextLine();
+		
+			String[]arr;
+			arr=s.split(" ");
+			if(s.equals("그만")) {break;}
+		
+			int b=0;
+			int sum=0;
+			int count=0;
+		
+			for(int i=0; i<arr.length; i++) {
+			
+				
+				b=Integer.parseInt(arr[i]);
+				sum+=b;
+				count++;
+			}
+			System.out.println("총 과목의 합계는 "+sum);
+			System.out.println("총 과목의 평균은 "+sum/(double)count);
+			}
+		while(true);
+		System.out.println("프로그램을 종료합니다.");
+
+		sc.close();
+		*/
+	
 	}
 
 }
