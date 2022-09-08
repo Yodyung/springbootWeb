@@ -25,6 +25,7 @@ public class ArgumentOfMainMethod02 {
 		System.out.println("==========Arrays.toString()============");
 		System.out.println(Arrays.toString(args));
 		
+		//run 옆에 컨피겨레이션 눌러서 해야함
 	}
 
 }
