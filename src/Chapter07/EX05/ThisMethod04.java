@@ -6,8 +6,8 @@ class Car{
 	double maxSpeed;		//200.0 km/h
 	
 	//생성자
-	Car() {
-		companyname="현대자동차";
+	Car() {		//리턴 타입이 없다, 클래스 이름과 동일
+		companyname="현대자동차";		//모두 this가 생략되어 있음
 		color="검정";
 		maxSpeed=200.0;
 		
