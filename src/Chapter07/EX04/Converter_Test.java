@@ -48,7 +48,7 @@ public class Converter_Test {
 		
 		//100$ ==> 몇 만원
 		
-		System.out.println("100$는 "+converter.toKWR(1000000)+"원 입니다.");
+		System.out.println("100$는 "+converter.toKWR(100)+"원 입니다.");
 		
 		System.out.println("소수점 둘째 자리까지 잘라서 출력하기");
 		
@@ -56,6 +56,7 @@ public class Converter_Test {
 		System.out.printf("원화 100만원은 %.2f $ 입니다.",converter.toUSD(1000000));
 		System.out.println();
 		System.out.printf("100$는 %.2f원 입니다.",converter.toKWR(100));
+		System.out.println();
 		
 		//2. 변수에 더블값을 할당 후 소숫점 2자리까지 변환해서 출력
 		System.out.println("---------예시----------");

@@ -28,7 +28,7 @@ public class Test_B {
 		System.out.println(b2.n);
 		
 		//정적 필드 수정 : 객체 없이 클래스 명으로 수정
-		B.n=9;
+		B.n=9;			// 클래스 자체로 수정 들어간거라 
 		
 		System.out.println(b1.n);
 		System.out.println(b2.n);
