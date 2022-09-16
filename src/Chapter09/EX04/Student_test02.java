@@ -57,7 +57,7 @@ class student02{
 
 class student03{
 	//필드의 접근 제어자는 보안을 위해서 private으로 선언 할 수 있음.
-	// - 필드의 값을 직접적으로 수정 할 수 없다.
+	// - 필드의 값을 직접적으로 수정 할 수 없다. (지정한 걸 불러올 수만 있음)
 	private static int num=1000;
 	private int id;
 	private String name;

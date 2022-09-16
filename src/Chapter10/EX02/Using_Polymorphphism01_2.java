@@ -64,7 +64,7 @@ public class Using_Polymorphphism01_2 {
 		System.out.println(pp2.Personname); 
 		
 		//6. Person_person 객체를 Person 타입으로 생성
-		Person p4=(Person) pp2;
+		Person p4=pp2;
 		System.out.println(p4.name);
 		System.out.println(p4.Personname); 
 		
