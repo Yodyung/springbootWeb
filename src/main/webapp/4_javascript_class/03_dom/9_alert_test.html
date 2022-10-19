@@ -7,13 +7,19 @@
 
 	window.onload = function(){
 		// 1. alert
-		
+		window.alert('이 사이트는 이사감')
+		//window.location.href = 'http://ikosmo.co.kr'; 밑이랑 같은거임.
+		//location.href = 'http://ikosmo.co.kr';
+		//window.location = 'http://ikosmo.co.kr'; 
 		
 		// 2. confirm
+		//var result = window.confirm('변경된 주소로 이동할깝쇼?');
+		//alert(result);
+		//if(result) window.location = 'http://ikosmo.co.kr';
 		
-		
-		// 3. prompt : 
-		
+		// 3. prompt :
+		var inputText = prompt("어디로 갈꺼지요?")
+		window.location = inputText;
 	}
 
 </script>

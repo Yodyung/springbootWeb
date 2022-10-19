@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#tbl {border : solid 2px;}
+
+#tbl .first td { background : skyblue; }
+
+ tr td {border : solid 1px;
+ 		background : yellowgreen;
+		width : 100px; height : 60px;
+		text-align:center; 
+ }
+ 
+ 
