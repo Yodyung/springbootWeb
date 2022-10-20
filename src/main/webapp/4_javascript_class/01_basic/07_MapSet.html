@@ -12,8 +12,18 @@ m.set('script','2222');
 m.set('nodejs', '2222');
 m.set('java','3333');
 
+//for in : 인덱스를 추출
+//for of : 요소를 추출
+for(var k of m){
+	document.write(k[0]+'/'+k[1]+'<hr/>');
+}
 
+for(var [k,v] of m){
+	document.write(k+'/'+v+'<br/>');
+}
 
+//for(var k in m){
+//	document.write(k+'<hr/>'); }		요소 추출이 불가능 해서 실행 안됨
 
 
 
@@ -35,6 +45,22 @@ s.add('dog');
 s.add('lion');
 s.add('dog');
 
+for(var k of s){
+	document.write(k+'<hr/>');
+}
+
+//for(var k in s){
+//	document.write(k+'<hr/>'); }		마찬가지로 요소 추출이 안돼서 실행 안됨
+
+let lotto = new Set();
+while(lotto.size<6){
+	//랜덤 수를 추출하여 set에 추가
+	let random=parseInt(Math.random()*45)+1;
+	lotto.add(random);	
+}
+for (var num of lotto){
+	document.write(num+"/");
+}
 
 </script>
 </head>

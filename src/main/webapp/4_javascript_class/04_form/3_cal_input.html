@@ -4,6 +4,36 @@
 <meta charset="UTF-8">
 <title> 폼 예제 3 </title>
 <script type="text/javascript">
+window.onload= function() {
+	//var today = new Date();
+	//frm1.y.value = today.getFullYear();
+	//frm1.m.value = today.getMonth()+1;
+	//frm1.d.value = today.getDate();
+	
+		btn.onclick=function(){
+		//화면에서 각각의 년 월 일 값을 얻어오기
+		var year = frm1.y.value;
+		var month = frm1.m.value;
+		var date = frm1.d.value;
+		//date 객체에 각각의 년, 월, 일 값 지정하기
+		var today = new Date();
+		today.setFullYear(year);
+		today.setMonth(month-1);
+		today.setDate(date);
+		alert(today.toDateString())
+		//해당 날짜의 요일을 구하여 화면 출력
+		var day = today.getDay();
+		switch(day){
+		case 0 : frm1.w.value="일";  break;
+        case 1 : frm1.w.value="월";  break;
+        case 2 : frm1.w.value="화";  break;
+        case 3 : frm1.w.value="수";  break;
+        case 4 : frm1.w.value="목";  break;
+        case 5 : frm1.w.value="금";  break;
+        case 6 : frm1.w.value="토";  break; 
+		}
+	}
+}
 
 </script>
 </head>
