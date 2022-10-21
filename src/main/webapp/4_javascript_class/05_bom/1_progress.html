@@ -13,7 +13,19 @@
 <script>
 	var progress = document.getElementById("progress");
 	var current = 0;
-
+	
+	window.setInterval(function() {
+		progress.value = ++current;
+		}, 100);
+	
+	//window.setTimeout(updateProgress, 500);		//밀리세컨드
+	
+	function updateProgress() {
+		progress.value = ++current;
+		if(current==100){
+			//clearInterval()
+		}
+	}
 	
 	
 	

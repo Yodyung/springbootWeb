@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+window.onload = function(){
+   var sel = fm.city;
+   for(var i=0; i<sel.length; i++){
+	   
+      sel[i].onclick = function(){
+    	 //alert(this.value); 
+         opener.frm.result.value = this.value;
+      }
+   }
+}
+</script>
+<title>서브창</title>
+</head>
+<body>
+
+<form name='fm'>
+	받은 결과 : <input type='text' name='result' size='20'/><hr/>
+	<input type='radio' name='city' value='가산' >가산	 <br>
+	<input type='radio' name='city' value='판교' >판교	 <br>
+	<input type='radio' name='city' value='부평' >부평	 <br>
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!-- 
+	자기를 열어준 창을 제어할려면? opener
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 메인페이지여요 </title>
+<script type="text/javascript">
+window.onload = function(){
+	//3_2_window_opened.html 창을 열기
+	var winObj = window.open('9_연습_window3_sub.html','','width=400, height=500');
+	
+	var page = frm.chooseSite;
+	page.onchange = showSite;
+	
+		function showSite(){
+		winObj.fm.result.value=page.value;
+	}
+		
+	
+	
+}
+</script>
+</head>
+<body>
+
+<form name="frm">
+		<h1> 이동하길 원하는 페이지를 선택하세요 </h1>
+		<select name="chooseSite">
+			<option>골라 골라</option>
+			<option value='서울'>서울</option>
+			<option value='경기도'>경기도</option>
+			<option value='인천'>인천</option>
+		</select>
+		결과받기 : <input type='text' name='result' size='20'/>
+		<br/>
+		<br/>
+		
+	</form>
+	
+
+</body>
+</html>

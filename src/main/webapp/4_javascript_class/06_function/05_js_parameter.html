@@ -4,6 +4,25 @@
 	<meta charset="UTF-8">
 	<title> 파라메터 인자</title>
 	<script>
+	//1. 함수의 인자로 기본형 (call by value)
+	var pri =10;
+	function priParam(pri){
+		pri--;													//복사본을 건드려서 값을 변경하고 원본은 그대로 남아있음
+		return pri;
+	}
+	document.write('1> 기본형 인자 : '+priParam(pri)+'<br/>');		//9
+	document.write('1> 기본형 인자 : '+pri+'<br/>');				//10
+	
+	//2. 함수의 인자로 참조형 (call by reference)
+	var ref =[1,2,3,4,5]
+	function refParam(ref){
+		ref.pop();												//pop은 원본을 건드려서 원본수정을 해버림 그래서 값이 아예 바뀜
+		return ref;
+	}
+	document.write('1> 기본형 인자 : '+refParam(ref)+'<br/>');		//1 2 3 4 
+	document.write('1> 기본형 인자 : '+ref+'<br/>');				//1 2 3 4 
+	
+	
 
 	</script>
 </head>

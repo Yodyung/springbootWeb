@@ -5,14 +5,21 @@
 <title> es6 인수 </title>
 <script>
  
-	// @ 1. 인수의 기본값(default) 지정
-   	function multiple( first, second )
+	// @ 1. 인수의 기본값(default) 지정 알아서 한개만 넣어도 뒤의 언디파인 값이 나오지 않도록 기본값을 저장해준다. 
+   	function multiple( first, second=1 )
 	{
 		return first * second;
 	}
-	document.writeln('곱은 ' +  multiple( 3, 4 ) + '<br/>'  );
-	document.writeln('곱은 ' +  multiple( 3, 4, 5 ) + '<br/>'  );
-	document.writeln('곱은 ' +  multiple( 3 ) + '<br/>' ); 
+	document.writeln('곱은 ' +  multiple( 3, 4 ) + '<br/>'  );		//12
+	document.writeln('곱은 ' +  multiple( 3, 4, 5 ) + '<br/>'  );	//12
+	document.writeln('곱은 ' +  multiple( 3 ) + '<hr/>' ); 			//0
+	//여기까지만 알아도 됨
+	
+	
+
+	document.writeln('곱은 ' +  multiple( 3, null ) + '<br/>' ); 
+	document.writeln('곱은 ' +  multiple( 3, false ) + '<br/>' ); 
+	document.writeln('곱은 ' +  multiple( 3, undefined ) + '<br/>' ); 
 	
 
 	
