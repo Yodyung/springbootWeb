@@ -7,9 +7,33 @@
 //-------------------------------------------------------------------------
 //  즉시 실행 함수
 //	 - 함수를 변수에 직접 할당하는 것이 아니라 함수의 결과물을 할당하기 위해 즉시 실행 함수를 사용(?)
-//	- 추후에 클로져와 관련
+//	- 추후에 클로져와 관련 (블로그에 잘못된 정보 많아서 반신반의 해야함)
 
+// var f= function(num){
+// 		document.write('num = '+num+"<hr/>");
+// 		return num;
+// 		}
+		
+var func = function(num){
+			document.write('num = '+num+"<hr/>");
+			return num;
+			}(10);
 
+document.write(func+"<hr/>");
+
+//------------------------------------------------------------------------------
+//자바스크립트는 함수도 리턴할 수 있다.
+var  byunsu = function(num){
+
+			return function(){
+					num--;
+					document.write('num = '+num+"<hr/>");
+					};
+			}(10);
+
+document.write(byunsu+"<hr/>");
+byunsu();
+byunsu();
 
 </script>
 </head>
