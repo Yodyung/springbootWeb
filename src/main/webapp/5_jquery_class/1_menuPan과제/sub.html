@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주문 확인</title>
+<script src='../lib/jquery-3.6.1.js' type="text/javascript" ></script>
+<script type="text/javascript">
+window.onload = function(){
+	
+	var n= $("#total", opener.document).val();
+	$('#total1').val(n);
+	
+	var m= $(".name[0]", opener.document).val();
+	$('#td').val(m);
+	
+	$('#btn1').click(function(){
+		alert('총 '+$('#total1').val()+'원 결제되었습니다.');
+		window.self.close();
+	});
+	
+     
+}
+</script>
+</head>
+<body>
+<div id="rightdiv">
+<table id="listTable" name='listTable'>
+   <tr id="listtitle">
+      <th colspan=4 id="titleText">  주문내역</th>
+   </tr>
+   <tr id="totallist">
+      <td colspan='4'>
+         총합 : <input type='text' name='total1'  id='total1'/> 원 
+      </td>
+   </tr>
+   <tr id="listtr">
+      <td width="150">목록</td>
+      <td width="100">갯수</td>
+      <td width="100">가격</td>
+      <td width="50">삭제</td>
+    </tr>
+   
+</table>
+</div>
+<div style=" text-align: center;">
+<table>
+<tr>
+ <input type='button'   value='카드결제'  id='btn1'/>
+ <input type='button'   value='현금결제'  id='btn2'/>
+ <input type='button'   value='모바일 상품권'  id='btn3'/>
+    </tr> 
+</table>
+</div>
+
+</body>
+</html>

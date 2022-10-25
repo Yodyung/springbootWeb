@@ -11,6 +11,30 @@
 	.borderRed { border : 3px dotted red; }
 	.borderBlue { border : 3px dotted blue; }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	//$('선택자').addClass('클래스명');
+	
+	//각 종류의 첫번째 요소 선택(떡볶이 와인)
+	//$('#food').addClass('#food>li:first');
+	//$('ul').find('li:eq(0)').addClass('border');
+	$('li:nth-child(1)').addClass('border');
+	
+	//음식중에서 세번째 요소 선택
+	//$('#result').text($('#food > li:eq(2)').text());
+	$('#food > li:eq(2)').addClass('bg');
+	
+	//'튀김'을 포함하는 모든 요소 선택
+	$('#food > li:contains("튀김")').addClass('borderBlue');
+	
+	//술 종류 중 두번째 요소 선택
+	//$('ul:eq(1)').find('li:eq(1)').addClass('bg');
+	$('ul:eq(1) > li:eq(1)').addClass('bg');
+});
+
+</script>
 
 </head>
 <body>
