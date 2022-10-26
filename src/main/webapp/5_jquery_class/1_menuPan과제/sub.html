@@ -18,13 +18,25 @@ window.onload = function(){
 		window.self.close();
 	});
 	
+    // 부모창에서 id가 parent_val인 요소(태그)의 값 가져오기
+	var parent_val = opener.$("tr.tbl > td.name").val(); 
+	var parent_val2 = opener.$(".tbl > .count").val(); 
+	var parent_val3 = opener.$(".tbl > .price1").val(); 
+	alert(parent_val);
+
+	// 자식창(팝업창)에서 id가 child_val인 요소(태그)의 값에 부모창에서 가져온 값 넣기
+	$("#listtr > td:first").val(parent_val);
+	$("#listtr > td:eq(1)").val(parent_val2);
+	$("#listtr > td:eq(2)").val(parent_val3);
+      
+	
      
 }
 </script>
 </head>
 <body>
 <div id="rightdiv">
-<table id="listTable" name='listTable'>
+<table id="listTable" name='listTable' style=" text-align: center;">
    <tr id="listtitle">
       <th colspan=4 id="titleText">  주문내역</th>
    </tr>
@@ -34,17 +46,17 @@ window.onload = function(){
       </td>
    </tr>
    <tr id="listtr">
-      <td width="150">목록</td>
-      <td width="100">갯수</td>
-      <td width="100">가격</td>
-      <td width="50">삭제</td>
+      <td width="200">목록</td>
+      <td width="150">갯수</td>
+      <td width="150">가격</td>
     </tr>
    
 </table>
 </div>
 <div style=" text-align: center;">
 <table>
-<tr>
+<tr style=" text-align: center;">
+
  <input type='button'   value='카드결제'  id='btn1'/>
  <input type='button'   value='현금결제'  id='btn2'/>
  <input type='button'   value='모바일 상품권'  id='btn3'/>

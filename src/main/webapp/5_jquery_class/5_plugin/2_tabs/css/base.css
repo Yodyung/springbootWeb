@@ -1,8 +1,15 @@
 /* */
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: strong;
+    font-style: strong;
+}
+
 body {
-	font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
-	color: #3E3E3E;	
-	font-size: 12px;
+	font-family: 'LeferiPoint-WhiteObliqueA';
+	color: #000000;	
+	font-size: 10px;
 }
 
 p {
@@ -10,12 +17,13 @@ p {
 }
 
 a {
+	font-family: 'LeferiPoint-WhiteObliqueA';
 	color: #3687AF;
 }
 
 h2 {
 	border-bottom:2px solid #015287;
-	color: #D15600;
+	color: #004040;
 	padding-top: 10px;
 	margin-top: 0;
 }
@@ -66,7 +74,7 @@ table {
 
 th {
 	border-bottom: 2px solid #015287;
-	color: #D15600;
+	color: #004040;;
 	font-size: 14px;
 	font-weight: normal;
 	text-align: left;
@@ -74,10 +82,15 @@ th {
 }
 
 td {
+	font-family: 'LeferiPoint-WhiteObliqueA';
+	color: #000000;	
+	font-size: 11px;
+	font-weight: bold;
+	font-style: bold;
 	padding: 6px;
 }
 
-/* li¿ä¼Ò¸¦ ¿À¸¥ÂÊÀ¸·Î ¹èÄ¡ */
+/* liï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ */
 #navigation{
 	float: right;
 	width: 150px;
@@ -85,16 +98,16 @@ td {
 
 
 /*-----------------------------------------------------*/
-/* jquery·Î Å¬·¡½º¸¦ Ãß°¡ÇÏ±â À§ÇÑ CSS Å¬·¡½º */
+/* jqueryï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ CSS Å¬ï¿½ï¿½ï¿½ï¿½ */
 /*-----------------------------------------------------*/
-/* Å×ÀÌºí¿¡ ÁÙ¹Ù²ã ½ºÅ¸ÀÏ ÁöÁ¤ÇÒ ¶§ */
+/* ï¿½ï¿½ï¿½Ìºï¿½ ï¿½Ù¹Ù²ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ */
 .table_striping {
 	background-color : #dddddd;
 	color : #666666
 }	
 
 /*-----------------------------------------------------*/
-/* Å×ÀÌºí¿¡ ¸¶¿ì½º ¿À¸£¸é °­Á¶ */
+/* ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ì½º ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 tr.td_mouseover {
 	background-color : #fffacd;
 }

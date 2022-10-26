@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>메인페이지</title>
+<script type="text/javascript"   src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script type="text/javascript"   src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
+
+//저장한 쿠키 변수가 값이 no가 아닐 때 
+if($.cookie('promotion') !='no'){
+//프로모션 창을 띄운다.
 window.open("9_promotion.html","","width=400, height=360");
+}
+
+
 </script>
 </head>
 <body>

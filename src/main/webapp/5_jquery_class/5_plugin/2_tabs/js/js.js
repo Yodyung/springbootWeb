@@ -1,4 +1,16 @@
 $(document).ready(function(){
+	
+	$('#info').tabs({
+			active:1,
+			event : 'click',
+			show : true,
+			hide : true
+		
+	});
+	
+	//이름이 달린 제목칸에 커서를 올리면 손가락 모양이 나오게
+	$('#btn').css({'cursor':'pointer'});
+	
    var a =0;
    $('.menuCount').change(function(){
    
@@ -44,12 +56,12 @@ $(document).ready(function(){
     
       });
       
-      //주문하기 눌렀을 때 새 창 뜨기
+      //주문확인 눌렀을 때 새 창 뜨기
       $('#btn').click(function(){
 		
 		alert('주문 확인');
       
-      	var winObj = window.open('sub.html','','width=450, height=300');
+      	var winObj = window.open('sub.html','','width=450, height=450');
       
     }); 
     

@@ -6,7 +6,24 @@
 <script type="text/javascript"   src="http://code.jquery.com/jquery-1.9.0.js"></script>
 <script type="text/javascript"   src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
+	//쿠키 : 웹클라이언트(웹브라우저)에 사용자 정보를 저장
+	$(function(){
+		
+	//화면 시작 시 쿠키 가져오기	
+	var c=$.cookie('myemail');
+		$('#txtMail').val(c);
+	
+		
+	//송신버튼 눌렸을 때
+	$('#btnSave').click(function(){
+		$.cookie('myemail',$('#txtMail').val(),{expires:1})
+		$('#txtMail').val('')
+		alert('송신 완료')
+	})
 
+	})
+	
+	//value를 내가 추가한건 속성값으로 얻어와야함 attr 
 </script>
 </head>
 <body>
