@@ -58,13 +58,13 @@ $(document).ready(function(){
       
       //주문확인 눌렀을 때 새 창 뜨기
       $('#btn').click(function(){
-		
-		alert('주문 확인');
-      
-      	var winObj = window.open('sub.html','','width=450, height=450');
-      
-    }); 
-    
+        var answer;
+         answer=confirm("주문하시겠습니까? ");
+         if(answer==true){
+     var winObj = window.open('sub.html','','width=450, height=450');
+         }
+           
+   	}) 
 
       
    })

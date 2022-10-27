@@ -3,7 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <title>Visualize</title>
-<script type="text/javascript"  src=""></script>
+<!-- css 받아오기 -->
+<link rel='stylesheet' type='text/css' href='./css/visualize.css'>
+<link rel='stylesheet' type='text/css' href='./css/visualize-light.css'>
+<link rel='stylesheet' type='text/css' href='./css/visualize-dark.css'>
+<!-- jqeury lib -->
+<script type="text/javascript" src='../../lib/jquery-3.6.1.js'></script>
+<!--  플러그인 -->
+<script src="js/visualize.jQuery.js" type="text/javascript"  ></script>
+
+<script type="text/javascript">
+$(function(){
+	$('#data').visualize({type:'bar'});		//막대 그래프
+	$('#data').visualize({type:'pie'});		//원 그래프
+	$('#data').visualize({type:'area'});	//영역 그래프(선 그래프와 동일한데 밑의 색이 칠해짐)
+	$('#data').visualize({type:'line'});	//선 그래프
+})
+
+</script>
 
 </head>
 <body>
