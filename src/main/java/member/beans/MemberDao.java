@@ -1,6 +1,5 @@
 package member.beans;
 
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -125,4 +124,49 @@ public class MemberDao {
 			
 		return flag;
 	}
+	
+	/**********************************************************
+	 * * 회원관리테이블 MEMBERTEST에서 기존의 id값과 중복되는지 확인하는 함수
+	 */
+	public boolean checkLogin(String id, String pass) throws Exception{
+		boolean result=false;
+		
+		try{
+			// 0. 연결 객체 얻어오기
+
+			Connection con=null;											//전송 객체 선언 해주기
+			ResultSet rs=null;
+			PreparedStatement ps=null;
+
+
+			con = DriverManager.getConnection(dbUrl,dbUser,dbPass);
+			System.out.println("DB 연결 성공"); 			
+			
+			// 1. sql 문장 만들기 ( insert문 )
+			String sql="SELECT * FROM membertest WHERE id=? AND password=?";
+			
+			// 2. sql 전송 객체 만들기
+			ps = con.prepareStatement(sql);
+	        ps.setString(1, id);
+	        ps.setString(2, pass);
+	        rs = ps.executeQuery();
+			
+			// 3. sql 전송
+			if(rs.next()) {result = true;}
+			//rs의 값이 존재할 때(id 가 일치한다면 값들이 존재하니까 true로 반환하기)
+			
+			// 4. 객체 닫기
+			rs.close();
+			ps.close();
+			con.close();
+			
+		}catch( Exception ex ){
+			throw new MemberException("중복아이디 검사시 오류  : " + ex.toString() );			
+		}
+		
+		return result;
+	}
+	
+	
+	
 }
