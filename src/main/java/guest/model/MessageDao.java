@@ -237,7 +237,6 @@ public class MessageDao {
 		try{
 			// 1. 연결객체(Connection) 얻어오기
 			con = DriverManager.getConnection(dbUrl,dbUser,dbPass);
-			System.out.println("DB 연결 성공"); 
 			
 			//2. sql 문장 만들기
 			String sql="DELETE FROM GUESTTB WHERE message_id=? AND password=?";
