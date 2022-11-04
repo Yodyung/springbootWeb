@@ -14,6 +14,7 @@ $(function(){
 		//유효성 검사하기
 	    // validate signup form on keyup and submit
         $('#frm').validate({
+        	
             rules: {
             	required:{required:true, minlength:1, remote:"Validate"},
                 pass: {required:true},               
