@@ -10,31 +10,28 @@
 $(function(){
 	// 작성 버튼이 눌렸을 때
 	$('input[value="작성"]').click(function(){
-		
-		//유효성 검사하기
-	    // validate signup form on keyup and submit
-        $('#frm').validate({
-        	
-            rules: {
-            	required:{required:true, minlength:1, remote:"Validate"},
-                pass: {required:true},               
-                title: {required:true},
-                content: {required:true}
-                //txtAge: {required:true, range:[1,100]} // 1~100범위
-            },
-            messages: {
-            	writer: {
-            		required:"아이디를 입력하시오.",
-                    minlength: jQuery.format("아이디는 {0}자 이상 입력해주세요!"),
-                    remote : jQuery.format("입력하신 {0}는 이미존재하는 아이디입니다. ")
-                },
-                pass:{required:"비밀번호를 입력하시오."},
-                title: {required:"제목을 입력하시오."},
-                content: {required:"내용을 입력하시오."}
-                //txtAge: {range: "나이는 1~100"}
-            }         
-        });
-      }); //end ready()
+	
+		//유효성 검사 submit 되기 전에 항상 넣어주기(공란 입력 불가)
+		   if($("input[name='writer']").val() == ""){
+			    alert("작성자를 입력해주세요.");
+			    $("input[name='writer']").focus();
+			    return false;
+			} 
+			if($("input[name='tltle']").val() == ""){
+			    alert("제목을 입력해주세요.");
+			    $("input[name='tltle']").focus();
+			    return false;
+			}
+			if($("textarea[name='content']").val() == ""){
+			    alert("내용을 입력해주세요.");
+			    $("textarea[name='content']").focus();
+			    return false;
+			}
+			if($("input[name='pass']").val() == ""){
+			    alert("비밀번호를 입력해주세요.");
+			    $("input[name='pass']").focus();
+			    return false;
+			}
 		
 		// 폼태그의 action 속성을 'BoardSave.jsp'
 		// 폼태그의 submit() 호출

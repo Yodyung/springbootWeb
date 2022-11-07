@@ -66,10 +66,11 @@ public class BoardDao
 			con	= DriverManager.getConnection( dbUrl, dbUser, dbPass );
 			
 			//* sql 문장 만들기
-			String putQuery		= "";  
+			String putQuery		= "INSERT ";  
 
 			ps		= con.prepareStatement( putQuery );
 			//* sql 문장의 ? 지정하기
+			ps.setString(1, rec.getWriter());
 	
 			int insertedCount = ps.executeUpdate();			
 
