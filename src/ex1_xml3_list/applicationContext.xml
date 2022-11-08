@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id='bean' class="ex1_xml3_list.ListBean">
+		<property name="intList"> <!-- setIntList() 호출 -->
+			<list>
+				<value>22</value>
+				<value>32</value>
+				<value>42</value>			
+			</list>
+		</property>
+		<property name="memberList">
+			<list>
+				<ref bean='m1'/>
+				<ref bean='m2'/>
+				<!-- 무명 빈 -->
+				<bean class="ex1_xml3_list.MemberBean">
+					<property name="name" value="사랑"/>
+					<property name="age" value="22"/>
+					<property name="message" value="힘빠져 헤헤"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id='m1' class="ex1_xml3_list.MemberBean">
+		<constructor-arg value="건희"/>
+		<constructor-arg value="27"/>
+		<constructor-arg value="거니조앙"/>	
+	</bean>
+	<bean id='m2' class="ex1_xml3_list.MemberBean">
+		<property name="name" value="냥냥이"/>
+		<property name="age" value="77"/>
+		<property name="message" value="오래살아라"/>
+	</bean>
+	
+</beans>
