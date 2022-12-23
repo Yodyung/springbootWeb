@@ -1,8 +1,0 @@
-1. 프로젝트 생성
-	spring Regacy Project	> spring MVC Project
-2. 라이브러리 추가(pom.xml), sql 쓰면 lib폴더 WEB-INF 에 추가
-3. 스프링, mybatis 설정
-	-servlet-context.xml
-	-root-context.xml
-4. DB 확인 / VO 확인
-	

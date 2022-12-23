@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dao.MemberDao">
+
+	<!-- 로그인 -->
+	<select id="loginSuccess" resultType="MemberVO" parameterType="MemberVO">
+		SELECT *
+		FROM member
+		WHERE userid=#{userid}
+		And userpass=#{userpass}
+	</select>
+
+	<!-- 회원가입 -->
+	<insert id="saveMember" parameterType="MemberVO">
+		INSERT INTO member(userid, userpass, username)
+		VALUES(#{userid}, #{userpass}, #{username})
+	</insert>
+	
+	<!-- 아이디 중복 체크-->
+	<select id="idCheck" parameterType="MemberVO" resultType="MemberVO">
+	select userpass, userid
+	from member
+	where userid=#{userId}
+	<if test="userPass != null">
+	And userpass=#{userPass}
+	</if>
+	</select>
+	
+	<!-- 회원정보 수정?
+	<update id="updateBoard" parameterType="MemberVO">
+		UPDATE board SET
+		TITLE = #{title},
+		CONTENT = #{content}
+		WHERE seq = #{seq}
+	</update>
+	 -->
+	
+
+</mapper>
